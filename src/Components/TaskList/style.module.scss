@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.container{
+    background-color: #EBECF0;
+    padding-top: 1rem;
+    border-radius: 10px;
+    width: 25%;
+    height: fit-content;
+    max-height: calc(100% - 20px);
+    margin-right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:last-child{
+        margin-right: 0;
+    }
+    
+    .title{
+        font-size: 18px;
+        font-weight: 400;
+        margin: 0 0 12px 0;
+        padding: 0 1rem;
+    }
+
+    .list{
+        overflow: auto;
+        padding: 0 1rem;
+
+        &::-webkit-scrollbar{
+            width: 12px;
+        }
+
+        &::-webkit-scrollbar-track{
+            background-color: white;
+        }
+
+        &::-webkit-scrollbar-thumb{
+            background-color: #CBCBCB;
+            border-radius: 5px;
+        }
+
+        .new_item{
+            background-color: white;
+            border-radius: 5px;
+            padding: 7px;
+            margin-bottom: 1rem;
+
+            .input{
+                width: 100%;
+                font-size: 18px;
+                border-top: 0;
+                border-left: 0;
+                border-right: 0;
+                border-bottom: 1px solid black;
+
+                &:focus-visible{
+                    outline: 0;
+                }
+            }
+
+            .select{
+                width: 100%;
+                font-size: 18px;
+                border: 0;
+            }
+        }
+    }
+
+    .footer{
+        padding: 0.5rem;
+
+        .button_add{
+            border: 0;
+            color: #5E6C84;
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            background-color: transparent;
+            cursor: pointer;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 7px;
+
+            &:hover{
+                background-color: white;
+            }
+
+            &:disabled{
+                cursor: default;
+                background-color: transparent;
+                color: #bababa;
+            }
+
+            .icon{
+                font-size: 25px;
+                margin-right: 5px;
+            }
+        }
+
+        .button_submit{
+            border: 0;
+            color: white;
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            background-color: #0079BF;
+            cursor: pointer;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.3rem 1.3rem;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .container{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}

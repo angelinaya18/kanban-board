@@ -1,0 +1,15 @@
+.avatar{
+    margin-left: auto;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+
+    &:hover{
+        cursor: pointer;
+    }
+}

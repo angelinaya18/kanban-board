@@ -1,0 +1,8 @@
+.container{
+    position: relative;
+    display: flex;
+
+    &:hover{
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,17 @@
+.container{
+    background-color: white;
+    border-radius: 5px;
+    padding: 7px;
+    margin-bottom: 1rem;
+    font-size: 18px;
+
+    &:hover{
+        cursor: pointer;
+        background-color: #DEDEDE;
+    }
+
+    .name{
+        margin: 0;
+        padding: 0;
+    }
+}    
