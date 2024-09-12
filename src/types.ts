@@ -1,15 +1,15 @@
-export interface ITask{
+export interface ITask {
     id: String,
     name: String,
     description: string
 }
 
-export interface ITaskList{
+export interface ITaskList {
     title: String,
     issues: Array<ITask>
 }
 
-export interface IOption{
+export interface IOption {
     value: Number,
     text: String
 }

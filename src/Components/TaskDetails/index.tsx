@@ -6,25 +6,25 @@ import closeIcon from '../../images/close.svg';
 import { useNavigate } from 'react-router-dom';
 
 const TaskDetails:FunctionComponent<{tasks: Array<ITaskList>, onEditDescription:(id: String, newDesc: string)=>any}>=({tasks, onEditDescription})=>{
-    const navigate=useNavigate();
+    const navigate = useNavigate();
     const editRef = useRef<HTMLTextAreaElement>(null);
     
-    const {taskId}=useParams();
+    const {taskId} = useParams();
 
     let task;
-    for(let k=0;k<tasks.length;k++){
-        let indexTask=tasks[k].issues.findIndex(i=>i.id===taskId);
-        if(indexTask>-1){
-            task=tasks[k].issues[indexTask];
+    for(let k = 0;k < tasks.length; k++) {
+        let indexTask = tasks[k].issues.findIndex(i => i.id === taskId);
+        if (indexTask > -1){
+            task = tasks[k].issues[indexTask];
             break;
         }
     }
 
-    const taskItem=task;
-    const [isShowEdit, setIsShowEdit]=useState<Boolean>(false);
-    const [inputValue, setInputValue]=useState("");
+    const taskItem = task;
+    const [isShowEdit, setIsShowEdit] = useState<Boolean>(false);
+    const [inputValue, setInputValue] = useState("");
     
-    useEffect(()=>{
+    useEffect(() => {
         if(taskItem?.description){
             setInputValue(taskItem.description);
         }

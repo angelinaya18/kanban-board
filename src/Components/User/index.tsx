@@ -7,7 +7,7 @@ import arrowDown from '../../images/arrow-down.svg';
 import arrowUp from '../../images/arrow-up.svg';
 
 const User=():JSX.Element=>{
-    const options: Array<IOption>=[
+    const options: Array<IOption> = [
         {
             value: 0,
             text: 'Profile'
@@ -18,9 +18,9 @@ const User=():JSX.Element=>{
         }
     ];
 
-    const [isShowDropDown, setisShowDropDown]=useState(false);
+    const [isShowDropDown, setisShowDropDown] = useState(false);
 
-    const handleClick = ()=>{
+    const handleClick = () => {
         setisShowDropDown(!isShowDropDown);
     };
 
